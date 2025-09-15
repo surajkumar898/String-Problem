@@ -1,0 +1,20 @@
+import java.util.Arrays;
+ class ana {
+    public static String gram(String S,String t){
+          char [] a= S.toCharArray();
+          char [] b= t.toCharArray();
+          Arrays.sort(b);
+          Arrays.sort(a);
+            if((a.length == b.length) && (Arrays.equals(a,b))){
+                return "Anagram";
+            }
+            return "Not Anagram";
+}        
+          public static void main(String [] args){
+            String S= "darks";
+            String t= "heart";
+            String result = gram(S,t);
+            System.out.println(result);
+    }
+    
+}
