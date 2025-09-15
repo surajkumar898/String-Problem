@@ -1,0 +1,27 @@
+ class rot {
+    public static String mid(String S){
+        char [] a= S.toCharArray();
+       int i=0; int r= a. length-1; char temp;
+        while(i<r){
+         if (Character.isLetter(a[i]) && Character.isLetter(a[r])) {
+                temp=a[i];
+                a[i]=a[r];
+               a[r]=temp;
+               i++;
+               r--;            
+            }
+            else if (!Character.isLetter(a[i])){
+                i++;
+            }
+               else if (!Character.isLetter(a[r])){
+                r--;
+               }
+            }
+              return new String(a);
+    }
+    public static void main(String [] args){
+        String S = "Hi@how#you";
+      String result = mid(S);
+      System.out.println(result);
+    }    
+}
