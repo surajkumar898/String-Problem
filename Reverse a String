@@ -1,0 +1,17 @@
+ class revstr {
+    public static String turn(String S){
+        String[] a = S.split(" ");  
+
+        String b= "";
+        int i;
+        for(i=a.length-1; i>=0; i--){
+           b=b+a[i] + " ";
+        }
+        return b;
+    }      
+    public static void main(String [] args){
+        String S = "Hi how are U";
+        String result = turn(S);
+        System.out.println(result);
+    }                   
+}
