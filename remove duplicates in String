@@ -1,0 +1,27 @@
+class del {
+    public static String val(String S) {
+        String a = "";
+        char[] b = S.toCharArray();
+
+        for (int i = 0; i < b.length; i++) {
+            if (b[i] == ' ') 
+                continue;
+
+            // check only duplicates after i
+            for (int j = i + 1; j < b.length; j++) {
+                if (b[i] == b[j]) {
+                    b[j] = ' '; // mark duplicates as space
+                }
+            }
+
+            a += b[i]; // add only the first occurrence
+        }
+        return a;
+    }
+
+    public static void main(String[] args) {
+        String S = "Developer";
+        String result = val(S);
+        System.out.println(result); // Output: Devlopr
+    }
+}
