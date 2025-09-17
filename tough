@@ -1,0 +1,26 @@
+
+ class pan{
+    public static String times(String S){
+        String [] a= S.split(" ");
+        int i;  String result= "";
+        for( i=0; i<a.length; i++){
+         char  ch = a[i].charAt(0);
+        if(Character.isLetter(ch)){
+
+            int count = Integer.parseInt(a[i].substring(1));
+            int j; 
+            for(j=0; j<count; j++){
+                result += ch + " ";
+            }
+            result +="\n";
+        }
+        }
+        return result;
+        
+    }
+    public static void main(String[] args){
+        String S = "a4 b12 c3 d10";
+        String result= times(S);
+        System.out.println(result);
+    }
+}
